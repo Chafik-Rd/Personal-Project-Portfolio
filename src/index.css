@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@theme {
+  --color-turquoise-400: #44D8EA;
+  --color-turquoise-300: #BEF1F8;
+  --color-turquoise-200: #D3E9F0;
+  --color-turquoise-100: #E9EFF3;
+
+  --color-mutedBlue-300: #114A6D;
+  --color-mutedBlue-200: #195F82;
+  --color-mutedBlue-100: #5989A4;
+  --color-mutedBlueGray: #6C7993;
+  --color-grayLight: #DCDCDC;
+
+}
