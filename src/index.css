@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(base);
+
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+}
+
 @theme {
   /* create theme colors  */
   --color-turquoise-400: #44D8EA;
@@ -10,6 +20,7 @@
   --color-mutedBlue-100: #5989A4;
   --color-mutedBlueGray: #6C7993;
   --color-grayLight: #DCDCDC;
+  --color-softWhite: #FCFCFD;
 
   /* create theme animation */
   --animate-float:float 4.5s ease-in-out infinite;
