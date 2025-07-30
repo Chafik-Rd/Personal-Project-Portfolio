@@ -10,7 +10,7 @@ export const AboutMe = () => {
           "Get to know more about my background, skills, and passion for web development"
         }
       />
-      <div className="flex flex-col lg:flex-row gap-6 max-w-330">
+      <div className="flex flex-col lg:flex-row gap-6 items-center max-w-330">
         <section className="flex h-full w-full">
           <div className="flex items-end w-full">
             <span className="w-10 md:w-20 h-10 md:h-20 rounded-full bg-turquoise-300 animate-float"></span>
@@ -30,11 +30,10 @@ export const AboutMe = () => {
             Frontend Developer
           </h3>
           <p className="text-base md:text-xl text-mutedBlueGray">
-            I am an engineer based in Bangkok, Thailand, with a Bachelor's
-            degree in Electronic Engineering from KMITL. I am passionate about
-            improving my coding skills and developing websites. I build websites
-            using React and am continuously working on enhancing my skills to
-            become a frontend developer.
+            Passionate Frontend Developer based in Bangkok with a background in
+            Electronics Engineering. I specialize in building responsive, modern
+            web apps using React and constantly seek to improve my skills
+            through hands-on projects and learning.
           </p>
           <ContactCard
             icon={{
