@@ -1,18 +1,19 @@
 export const Navbar = () => {
     return (
-        <nav>
-            <div className="flex justify-between items-center px-12 py-4 bg-linear-to-br from-mutedBlue-300 to-mutedBlue-200">
+        <nav className="sticky top-0 z-10">
+            <div className="flex justify-between items-center px-12 py-4">
                 <section>
                     <p className="text-3xl text-transparent bg-clip-text bg-linear-to-br from-mutedBlue-300 to-turquoise-400 font-bold">CR</p>
                 </section>
                 <section>
-                    <ul className="flex gap-6">
-                        <li>Home</li>
-                        <li>About me</li>
-                        <li>Skills</li>
-                        <li>Projects</li>
-                        <li>Experience</li>
-                        <li>Contact</li>
+                    <img src="./src/assets/images/menu.svg" className="md:hidden"/>
+                    <ul className="hidden md:flex gap-6">
+                        <li className="cursor-pointer hover:scale-95">Home</li>
+                        <li className="cursor-pointer hover:scale-95">About me</li>
+                        <li className="cursor-pointer hover:scale-95">Skills</li>
+                        <li className="cursor-pointer hover:scale-95">Projects</li>
+                        <li className="cursor-pointer hover:scale-95">Experience</li>
+                        <li className="cursor-pointer hover:scale-95">Contact</li>
                     </ul>
                 </section>
             </div>
