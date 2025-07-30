@@ -12,6 +12,7 @@
   --color-grayLight: #DCDCDC;
 
   /* create theme animation */
+  --animate-float:float 4.5s ease-in-out infinite;
   @keyframes float {
     0%, 100% {
       transform: translateY(-10%);
