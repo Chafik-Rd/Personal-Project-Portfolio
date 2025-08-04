@@ -1,5 +1,6 @@
-import { Button } from "./Button";
 import { IconCard } from "./IconCard";
+import { Button } from "@/components/ui/button"
+import { ArrowDown, Download, Mouse} from "lucide-react"
 
 export const Home = () => {
   return (
@@ -16,20 +17,12 @@ export const Home = () => {
           Frontend Developer with a background in Electronics Engineering, passionate about creating user-friendly interfaces with React. Skilled in teamwork, problem-solving, and continuous learning.
         </p>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
-          <Button
-            text={"About Me"}
-            style={"px-8 py-4 bg-mutedBlue-100 text-lg w-full md:w-50"}
-          />
-          <Button
-            text={"Resume"}
-            style={
-              "bg-white text-lg px-8 py-4 w-50 text-mutedBlue-300 w-full md:w-50"
-            }
-            icon={{
-              url: "./src/assets/images/icons/download.svg",
-              alt: "icon download",
-            }}
-          />
+            <Button size="lg" className="text-xl bg-mutedBlue-100">
+              <ArrowDown strokeWidth={1.5} className="size-5" />
+            About Me</Button>
+            <Button size="lg" variant="secondary" className="text-xl text-mutedBlue-300">
+              <Download strokeWidth={1.5} className="size-5" />
+              Resume</Button>
         </div>
         <div className="flex gap-8 animate-float pt-10">
           <IconCard
@@ -56,7 +49,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="animate-bounce absolute bottom-0 cursor-pointer">
-        <img src="./src/assets/images/icons/mouse.svg" />
+        <Mouse color="#ffffff66" strokeWidth={1} size={48} />
       </div>
     </div>
   );
