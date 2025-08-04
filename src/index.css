@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @import "tailwindcss/preflight.css" layer(base);
 @import "tw-animate-css";
@@ -13,30 +13,47 @@
 
 @theme {
   /* create theme colors  */
-  --color-turquoise-400: #44D8EA;
-  --color-turquoise-300: #BEF1F8;
-  --color-turquoise-200: #D3E9F0;
-  --color-turquoise-100: #E9EFF3;
-  --color-mutedBlue-300: #114A6D;
-  --color-mutedBlue-200: #195F82;
-  --color-mutedBlue-100: #5989A4;
-  --color-mutedBlueGray: #6C7993;
-  --color-grayLight: #DCDCDC;
-  --color-softWhite: #FCFCFD;
+  --color-turquoise-400: #44d8ea;
+  --color-turquoise-300: #bef1f8;
+  --color-turquoise-200: #d3e9f0;
+  --color-turquoise-100: #e9eff3;
+  --color-mutedBlue-300: #114a6d;
+  --color-mutedBlue-200: #195f82;
+  --color-mutedBlue-100: #5989a4;
+  --color-mutedBlueGray: #6c7993;
+  --color-grayLight: #dcdcdc;
+  --color-softWhite: #fcfcfd;
 
   /* create theme animation */
-  --animate-float:float 4.5s ease-in-out infinite;
+  --animate-float: float 4.5s ease-in-out infinite;
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(-10%);
     }
     50% {
       transform: translateY(10%);
     }
   }
-
+  --animate-scroll: scroll 60s linear infinite;
+  @keyframes scroll {
+    0% {
+      transform: translate(0%);
+    }
+    100% {
+      transform: translate(-50%);
+    }
+  }
+  --animate-scroll-black: scroll-black 60s linear infinite;
+  @keyframes scroll-black {
+    100% {
+      transform: translate(0%);
+    }
+    0% {
+      transform: translate(-50%);
 }
-
+  }
+}
 /* ---break---  */
 
 @theme inline {
@@ -87,14 +104,14 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #114a6d;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: #ffffff;
+  --secondary-foreground: #000000;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklab(100% 0 -0.00011);
+  --accent-foreground: oklch(0% 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
