@@ -1,48 +1,12 @@
 import { PageHeader } from "./PageHeader";
 import { ProjectCard } from "./ProjectCard";
+import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
+import { projects } from "../data/projects";
 
 export const Project = () => {
-  const projects = [
-    {
-      id: 4,
-      img: {
-        url: "./src/assets/images/web-portfolio.png",
-        alt: "web portfolio",
-      },
-      name: "LeftoverChef ",
-      detail: "",
-      tags: ["Ract", "TailwindCSS", "JavaScript", "Vite"],
-    },
-    {
-      id: 3,
-      img: {
-        url: "./src/assets/images/web-portfolio.png",
-        alt: "web portfolio",
-      },
-      name: "web portfolio",
-      detail: "",
-      tags: ["Ract", "TailwindCSS", "JavaScript", "Vite"],
-    },
-    {
-      id: 2,
-      img: {
-        url: "./src/assets/images/web-portfolio-v1.png",
-        alt: "web portfolio",
-      },
-      name: "web portfolio v.1",
-      detail: "",
-      tags: ["Ract", "TailwindCSS", "JavaScript", "Vite"],
-    },
-    {
-      id: 1,
-      img: { url: "./src/assets/images/web-pokemon.png", alt: "web pokemon" },
-      name: "web pokemon API",
-      detail: "",
-      tags:["Ract","TailwindCSS","JavaScript","Vite"]
-    },
-  ];
   return (
-    <div className="min-h-[calc(100vh-68px)] py-16 px-4 lg:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
       <PageHeader
         header={"Projects"}
         text={
@@ -52,15 +16,23 @@ export const Project = () => {
       <div className="flex flex-col md:flex-row gap-6 justify-between flex-wrap">
         {projects.map((project) => {
           return (
-            <ProjectCard
+            <ProjectCard key={project.id}
               img={project.img}
               name={project.name}
               detail={project.detail}
-              tags={project.tags}
+              tags={project.techStacks}
             />
           );
         })}
       </div>
+      <Button
+        size="lg"
+        variant="outline"
+        className="text-xl text-mutedBlue-300 animate-bounce"
+      >
+        <ArrowDown strokeWidth={1.5} className="size-5" />
+        See more
+      </Button>
     </div>
   );
 };

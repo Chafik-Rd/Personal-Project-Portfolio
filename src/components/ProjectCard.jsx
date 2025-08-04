@@ -1,47 +1,30 @@
-import { Button } from "./Button";
 import { Tag } from "./Tag";
+import { Button } from "@/components/ui/button";
+import { Globe, Github} from "lucide-react"
 
-export const ProjectCard = ({img, name, detail, tags}) => {
+export const ProjectCard = ({ img, name, detail, tags}) => {
   return (
-    <div className="max-w-150 min-w-90 w-full max-h-125 bg-white rounded-xl shadow-md mx-auto">
+    <div className="max-w-150 w-full max-h-125 bg-white rounded-xl shadow-md mx-auto">
       <div className="h-48 w-full overflow-hidden">
-        <img
-          src={img.url}
-          alt={img.alt}
-          className="rounded-t-xl w-full"
-        />
+        <img src={img.url} alt={img.alt} className="rounded-t-xl w-full" />
       </div>
-      <div className="py-6 px-4 lg:px-6 flex flex-col gap-4">
-        <h3 className="text-2xl font-medium capitalize">{name}</h3>
-        <p className="text-mutedBlueGray hidden md:block">
-          {detail}
-        </p>
-        <div className="flex gap-3">
+      <div className="py-6 px-6 sm:px-8 flex flex-col gap-3">
+        <h3 className="text-xl font-medium capitalize">{name}</h3>
+        <p className="text-mutedBlueGray hidden md:block">{detail}</p>
+        <div className="flex gap-3 w-70 overflow-hidden">
           {tags.map((tag) => {
-            return (
-              <Tag text={tag} />
-            )
+            return <Tag text={tag} />;
           })}
         </div>
-        <div className="flex gap-8 justify-center">
-          <Button
-            text={"Live Demo"}
-            style={"bg-mutedBlue-300 text-white py-3 px-6"}
-            icon={{
-              url: "./src/assets/images/icons/eye-open.png",
-              alt: "icon eye open",
-            }}
-            iconStyle="w-5"
-          />
-          <Button
-            text={"Code"}
-            style={"bg-white py-3 px-6"}
-            icon={{
-              url: "./src/assets/images/icons/github-black.svg",
-              alt: "icon github-black",
-            }}
-            iconStyle="w-5"
-          />
+        <div className="flex gap-3 sm:gap-8 justify-center sm:justify-end">
+          <Button size="md" className="text-base">
+            <Globe strokeWidth={1.5} className="size-5" />
+            Live Demo
+          </Button>
+          <Button size="md" variant="outline" className="text-base">
+            <Github strokeWidth={1.5} className="size-5" />
+            Code
+          </Button>
         </div>
       </div>
     </div>
