@@ -8,7 +8,7 @@ export const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
     },[scrollY]);
     return (
-        <nav className={`sticky top-0 z-10 backdrop-blur-md bg-mutedBlue-300 ${scrollY>100?"bg-white/80":""}`}>
+        <nav className={`sticky top-0 z-10 backdrop-blur-md ${scrollY>100?"bg-white/80":""}`}>
             <div className="flex justify-between items-center px-12 py-4">
                 <section>
                     <p className="text-3xl text-transparent bg-clip-text bg-linear-to-br from-mutedBlue-300 to-turquoise-400 font-bold">CR</p>
