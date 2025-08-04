@@ -3,7 +3,7 @@ import { PageHeader } from "./PageHeader";
 
 export const AboutMe = () => {
   return (
-    <div className="min-h-[calc(100vh-68px)] py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
       <PageHeader
         header={"About me"}
         text={
@@ -26,10 +26,10 @@ export const AboutMe = () => {
           </div>
         </section>
         <section className="flex flex-col gap-4 h-full w-full">
-          <h3 className="text-2xl md:text-4xl font-medium">
+          <h3 className="text-2xl font-medium">
             Frontend Developer
           </h3>
-          <p className="text-base md:text-xl text-mutedBlueGray">
+          <p className="text-mutedBlueGray">
             Passionate Frontend Developer based in Bangkok with a background in
             Electronics Engineering. I specialize in building responsive, modern
             web apps using React and constantly seek to improve my skills
