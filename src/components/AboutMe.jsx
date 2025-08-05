@@ -45,7 +45,7 @@ export const AboutMe = () => {
           </div>
           <div className="w-full">
             <div className="w-50 md:w-100 h-50 md:h-100 rounded-full bg-turquoise-100">
-              <img src="./src/assets/images/fik.png" />
+              <img src="./images/fik.png" />
             </div>
           </div>
 

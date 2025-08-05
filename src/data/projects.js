@@ -1,14 +1,14 @@
 export const projects = [
   {
     id: 4,
-    name: "web pprtfolio",
+    name: "LeftoverChef",
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
-      url: "./src/assets/images/web-portfolio.png",
+      url: "./images/web-leftoverChef.png",
       alt: "web portfolio",
     },
-    webDemo: "",
+    webDemo: "https://react-personal-project-chafik-rd.vercel.app/",
     gitHub: "",
   },
   {
@@ -17,11 +17,11 @@ export const projects = [
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
-      url: "./src/assets/images/web-portfolio.png",
+      url: "./images/web-portfolio.png",
       alt: "web portfolio",
     },
-    webDemo: "",
-    gitHub: "",
+    webDemo: "https://personal-project-portfolio-three.vercel.app/",
+    gitHub: "https://github.com/Chafik-Rd/Personal-Project-Portfolio",
   },
   {
     id: 2,
@@ -29,11 +29,11 @@ export const projects = [
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
-      url: "./src/assets/images/web-portfolio-v1.png",
+      url: "./images/web-portfolio-v1.png",
       alt: "web portfolio V.1",
     },
-    webDemo: "",
-    gitHub: "",
+    webDemo: "https://portfolio-chafik.netlify.app/",
+    gitHub: "https://github.com/Chafik-Rd/Personal-Project-PortfolioV1",
   },
   {
     id: 1,
@@ -41,10 +41,10 @@ export const projects = [
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
-      url: "./src/assets/images/web-pokemon.png",
+      url: "./images/web-pokemon.png",
       alt: "web pokemon",
     },
-    webDemo: "",
-    gitHub: "",
+    webDemo: "https://pokemon-chafik.netlify.app",
+    gitHub: "https://github.com/Chafik-Rd/Personal-Project-Pokemon",
   },
 ];

@@ -26,6 +26,8 @@ export const Project = () => {
               name={project.name}
               detail={project.detail}
               tags={project.techStacks}
+              webDemo={project.webDemo}
+              gitHub={project.gitHub}
             />
           );
         })}
