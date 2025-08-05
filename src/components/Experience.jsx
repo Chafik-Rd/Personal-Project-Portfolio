@@ -5,7 +5,7 @@ import { experience, education } from "../data/experienceEducation";
 
 export const Experience = () => {
   return (
-    <div className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
+    <div id="experience" className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
       <PageHeader
         header={"Experience & Education"}
         text={"My professional journey and educational background"}

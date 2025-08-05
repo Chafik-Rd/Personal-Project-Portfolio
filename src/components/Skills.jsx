@@ -3,7 +3,7 @@ import { techStacks, firstHalf, secondHalf } from "../data/techStacks";
 import { SkillCard } from "./SkillCard";
 export const Skills = () => {
   return (
-    <div className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div id="techStack" className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
       <PageHeader header={"Tech Stack"} />
 
       {/* animation scroll one line */}

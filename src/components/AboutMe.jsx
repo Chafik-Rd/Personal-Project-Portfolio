@@ -31,7 +31,7 @@ const contacts = [
 
 export const AboutMe = () => {
   return (
-    <div className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div id="about" className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
       <PageHeader
         header={"About me"}
         text={

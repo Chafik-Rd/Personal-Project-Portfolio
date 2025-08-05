@@ -1,0 +1,15 @@
+export const contacts =[
+    {id:3,
+        header:"Phone",
+        title:"099-3108320",
+        icon:<MapPin className="m-auto" />,
+    },
+    {id:2,
+        header:"Location",
+        title:"Bangkok, Thailand",
+    },
+    {id:1,
+        header:"Email",
+        title:"Chafikraden@gmail.com",
+    },
+]

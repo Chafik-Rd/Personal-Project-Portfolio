@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 
 export const Project = () => {
   return (
-    <div className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
+    <div id="projects" className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
       <PageHeader
         header={"Projects"}
         text={

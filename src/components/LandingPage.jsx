@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mouse } from "lucide-react";
 import { Send, Linkedin, Github } from "lucide-react";
+import { Link } from "react-scroll";
 
 const connectsMe = [
   {
@@ -23,9 +24,9 @@ const connectsMe = [
   },
 ];
 
-export const Home = () => {
+export const LandingPage = () => {
   return (
-    <div className="min-h-[calc(100vh-68px)] relative bg-linear-to-br from-mutedBlue-300 to-mutedBlue-200 text-white font-medium p-4 flex flex-col justify-center items-center">
+    <div id="landingPage" className="min-h-[calc(100vh-68px)] relative bg-linear-to-br from-mutedBlue-300 to-mutedBlue-200 text-white font-medium p-4 flex flex-col justify-center items-center">
       <div className="flex flex-col gap-6 items-center max-w-200">
         <p className="text-turquoise-400 text-2xl md:text-3xl">Hello, I'm</p>
         <h1 className="text-5xl md:text-8xl font-bold text-center">
@@ -64,7 +65,9 @@ export const Home = () => {
         </div>
       </div>
       <div className="animate-bounce absolute bottom-0 cursor-pointer">
-        <Mouse color="#ffffff66" strokeWidth={1} size={48} />
+        <Link to="about" smooth={true} duration={500}>
+          <Mouse color="#ffffff66" strokeWidth={1} size={48} />
+        </Link>
       </div>
     </div>
   );

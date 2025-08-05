@@ -50,7 +50,7 @@ export const Contact = () => {
     console.log("");
   }
   return (
-    <div className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div id="contact" className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
       <PageHeader
         header={"Get In Touch"}
         text={
