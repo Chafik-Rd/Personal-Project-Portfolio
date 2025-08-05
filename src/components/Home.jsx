@@ -6,19 +6,19 @@ const connectsMe = [
   {
     id: 3,
     header: "Github",
-    link: "",
+    link: "https://github.com/Chafik-Rd",
     icon: <Github className="size-5" />,
   },
   {
     id: 2,
     header: "Linkedin",
-    link: "",
+    link: "https://www.linkedin.com/in/chafik-rd/",
     icon: <Linkedin className="size-5" />,
   },
   {
     id: 1,
     header: "Telegram",
-    link: "Chafikraden@gmail.com",
+    link: "https://t.me/ChafikRd",
     icon: <Send className="size-5" />,
   },
 ];
@@ -55,9 +55,11 @@ export const Home = () => {
         </div>
         <div className="flex gap-8 animate-float pt-10">
           {connectsMe.map((connectMe) => (
-            <Button key={connectMe.id} size="icon" variant="ghost">
-              {connectMe.icon}
-            </Button>
+            <a href={connectMe.link} target="_blank" rel="noopener noreferrer">
+              <Button key={connectMe.id} size="icon" variant="ghost">
+                {connectMe.icon}
+              </Button>
+            </a>
           ))}
         </div>
       </div>
