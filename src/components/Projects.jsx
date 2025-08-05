@@ -18,7 +18,7 @@ export const Project = () => {
         }
       />
       <div className="flex flex-col md:flex-row gap-6 justify-between flex-wrap">
-        {projects.map((project) => {
+        {projects.slice(0, 4).map((project) => {
           return (
             <ProjectCard
               key={project.id}
