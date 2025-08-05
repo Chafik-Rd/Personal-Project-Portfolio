@@ -11,18 +11,21 @@ const contacts = [
     header: "Phone",
     title: "099-3108320",
     icon: <Phone className="m-auto" />,
+    link: "#",
   },
   {
     id: 2,
     header: "Location",
     title: "Bangkok, Thailand",
     icon: <MapPin className="m-auto" />,
+    link: "#",
   },
   {
     id: 1,
     header: "Email",
     title: "Chafikraden@gmail.com",
     icon: <Mail className="m-auto" />,
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chafikraden@gmail.com",
   },
 ];
 const connectsMe = [
@@ -48,9 +51,12 @@ const connectsMe = [
 export const Contact = () => {
   const handleSubmit = () => {
     console.log("");
-  }
+  };
   return (
-    <div id="contact" className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div
+      id="contact"
+      className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
+    >
       <PageHeader
         header={"Get In Touch"}
         text={
@@ -92,7 +98,12 @@ export const Contact = () => {
           <h3 className="text-2xl font-medium">Contact Information</h3>
           <div className="flex flex-col gap-3">
             {contacts.map((contact) => (
-              <ContactCard key={contact.id} header={contact.header} detail={contact.title}>
+              <ContactCard
+                key={contact.id}
+                header={contact.header}
+                detail={contact.title}
+                link={contact.link}
+              >
                 {contact.icon}
               </ContactCard>
             ))}
@@ -101,10 +112,16 @@ export const Contact = () => {
             <h4 className="text-xl font-medium mb-2">Connect with me</h4>
             <div className="flex gap-8">
               {connectsMe.map((connectMe) => (
-                <a key={connectMe.id} href={connectMe.link} target="_blank" rel="noopener noreferrer">
-                <Button  size="icon" variant="outline">
-                {connectMe.icon}
-              </Button></a>
+                <a
+                  key={connectMe.id}
+                  href={connectMe.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="icon" variant="outline">
+                    {connectMe.icon}
+                  </Button>
+                </a>
               ))}
             </div>
           </div>

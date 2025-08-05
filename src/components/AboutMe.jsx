@@ -8,24 +8,28 @@ const contacts = [
     header: "Location",
     title: "Bangkok, Thailand",
     icon: <MapPin className="m-auto" />,
+    link: "#",
   },
   {
     id: 3,
     header: "Email",
     title: "Chafikraden@gmail.com",
     icon: <Mail className="m-auto" />,
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chafikraden@gmail.com",
   },
   {
     id: 2,
     header: "Education",
     title: "B.Eng. in Electronics - KMITL",
     icon: <GraduationCap className="m-auto" />,
+    link: "#",
   },
   {
     id: 1,
     header: "Experience",
     title: "2+ years in Engineering",
     icon: <Calendar className="m-auto" />,
+    link: "#",
   },
 ];
 
@@ -66,6 +70,7 @@ export const AboutMe = () => {
               key={contact.id}
               header={contact.header}
               detail={contact.title}
+              link={contact.link}
             >
               {contact.icon}
             </ContactCard>
