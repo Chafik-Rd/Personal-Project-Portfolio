@@ -5,7 +5,7 @@ import { ProjectCard } from "../components/ProjectCard";
 import { PageHeader } from "../components/PageHeader";
 export const AllProjects = () => {
   return (
-    <div id="projects" className="py-10 px-4 lg:px-12 bg-white">
+    <div id="allProjects" className="py-10 px-4 lg:px-12 bg-white">
       <Link to="/">
         <p className="flex gap-1 text-lg ml-10">
           <ArrowLeft strokeWidth={1.5} />
