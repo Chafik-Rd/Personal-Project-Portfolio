@@ -19,7 +19,7 @@ export const Experience = () => {
             </h3>
           </div>
           {experience.map((item) => (
-            <ExperienceCard
+            <ExperienceCard key={item.id}
               name={item.jobPosition}
               tag={item.jobType}
               organization={item.company}
@@ -36,6 +36,7 @@ export const Experience = () => {
           </div>
           {education.map((item) => (
             <ExperienceCard
+              key={item.id}
               name={item.name}
               organization={item.institution}
               date={item.date}

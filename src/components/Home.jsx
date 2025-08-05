@@ -1,6 +1,27 @@
-import { IconCard } from "./IconCard";
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Download, Mouse} from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Download, Mouse } from "lucide-react";
+import { Send, Linkedin, Github } from "lucide-react";
+
+const connectsMe = [
+  {
+    id: 3,
+    header: "Github",
+    link: "",
+    icon: <Github className="size-5" />,
+  },
+  {
+    id: 2,
+    header: "Linkedin",
+    link: "",
+    icon: <Linkedin className="size-5" />,
+  },
+  {
+    id: 1,
+    header: "Telegram",
+    link: "Chafikraden@gmail.com",
+    icon: <Send className="size-5" />,
+  },
+];
 
 export const Home = () => {
   return (
@@ -14,38 +35,30 @@ export const Home = () => {
         </h1>
         <p className="text-3xl md:text-4xl">Frontend Developer</p>
         <p className="text-base md:text-xl text-center">
-          Frontend Developer with a background in Electronics Engineering, passionate about creating user-friendly interfaces with React. Skilled in teamwork, problem-solving, and continuous learning.
+          Frontend Developer with a background in Electronics Engineering,
+          passionate about creating user-friendly interfaces with React. Skilled
+          in teamwork, problem-solving, and continuous learning.
         </p>
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
-            <Button size="lg" className="text-xl bg-mutedBlue-100">
-              <ArrowDown strokeWidth={1.5} className="size-5" />
-            About Me</Button>
-            <Button size="lg" variant="secondary" className="text-xl text-mutedBlue-300">
-              <Download strokeWidth={1.5} className="size-5" />
-              Resume</Button>
+          <Button size="lg" className="text-xl bg-mutedBlue-100">
+            <ArrowDown strokeWidth={1.5} className="size-5" />
+            About Me
+          </Button>
+          <Button
+            size="lg"
+            variant="secondary"
+            className="text-xl text-mutedBlue-300"
+          >
+            <Download strokeWidth={1.5} className="size-5" />
+            Resume
+          </Button>
         </div>
         <div className="flex gap-8 animate-float pt-10">
-          <IconCard
-            icon={{
-              url: "./src/assets/images/icons/github-white.svg",
-              alt: "icon github-white",
-            }}
-            style={"hover:bg-mutedBlue-100 cursor-pointer"}
-          />
-          <IconCard
-            icon={{
-              url: "./src/assets/images/icons/linkedin-white.svg",
-              alt: "icon linkedin-white",
-            }}
-            style={"hover:bg-mutedBlue-100 cursor-pointer"}
-          />
-          <IconCard
-            icon={{
-              url: "./src/assets/images/icons/talagram-white.svg",
-              alt: "icon linkedin-white",
-            }}
-            style={"hover:bg-mutedBlue-100 cursor-pointer"}
-          />
+          {connectsMe.map((connectMe) => (
+            <Button key={connectMe.id} size="icon" variant="ghost">
+              {connectMe.icon}
+            </Button>
+          ))}
         </div>
       </div>
       <div className="animate-bounce absolute bottom-0 cursor-pointer">

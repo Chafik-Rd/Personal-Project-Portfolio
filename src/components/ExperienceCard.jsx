@@ -30,8 +30,8 @@ export const ExperienceCard = ({
           </section>
         </div>
         <ul className={`text-mutedBlueGray text-sm md:text-base ${detail.length>1?"list-disc pl-4":""}`}>
-          {detail.map((item) => (
-            <li>{item}</li>
+          {detail.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>

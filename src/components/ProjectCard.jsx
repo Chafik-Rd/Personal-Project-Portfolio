@@ -12,8 +12,8 @@ export const ProjectCard = ({ img, name, detail, tags}) => {
         <h3 className="text-xl font-medium capitalize">{name}</h3>
         <p className="text-mutedBlueGray hidden md:block">{detail}</p>
         <div className="flex gap-3 w-70 overflow-hidden">
-          {tags.map((tag) => {
-            return <Tag text={tag} />;
+          {tags.map((tag,index) => {
+            return <Tag key={index} text={tag} />;
           })}
         </div>
         <div className="flex gap-3 sm:gap-8 justify-center sm:justify-end">

@@ -1,4 +1,5 @@
 import { AboutMe } from "./components/AboutMe"
+import { Contact } from "./components/Contact"
 import { Experience } from "./components/Experience"
 import { Home } from "./components/Home"
 import { Navbar } from "./components/Navbar"
@@ -17,6 +18,7 @@ function App() {
       <Project/>
       <Skills/>
       <Experience/>
+      <Contact/>
     </div>
   )
 }

@@ -1,5 +1,33 @@
 import { ContactCard } from "./ContactCard";
 import { PageHeader } from "./PageHeader";
+import { MapPin, Mail, Calendar, GraduationCap } from "lucide-react";
+
+const contacts = [
+  {
+    id: 4,
+    header: "Location",
+    title: "Bangkok, Thailand",
+    icon: <MapPin className="m-auto" />,
+  },
+  {
+    id: 3,
+    header: "Email",
+    title: "Chafikraden@gmail.com",
+    icon: <Mail className="m-auto" />,
+  },
+  {
+    id: 2,
+    header: "Education",
+    title: "B.Eng. in Electronics - KMITL",
+    icon: <GraduationCap className="m-auto" />,
+  },
+  {
+    id: 1,
+    header: "Experience",
+    title: "2+ years in Engineering",
+    icon: <Calendar className="m-auto" />,
+  },
+];
 
 export const AboutMe = () => {
   return (
@@ -26,47 +54,22 @@ export const AboutMe = () => {
           </div>
         </section>
         <section className="flex flex-col gap-4 h-full w-full">
-          <h3 className="text-2xl font-medium">
-            Frontend Developer
-          </h3>
+          <h3 className="text-2xl font-medium">Frontend Developer</h3>
           <p className="text-mutedBlueGray">
             Passionate Frontend Developer based in Bangkok with a background in
             Electronics Engineering. I specialize in building responsive, modern
             web apps using React and constantly seek to improve my skills
             through hands-on projects and learning.
           </p>
-          <ContactCard
-            icon={{
-              url: "./src/assets/images/icons/marker-blue.svg",
-              alt: "icon marker",
-            }}
-            header={"Location"}
-            detail={"Bangkok, Thailand"}
-          />
-          <ContactCard
-            icon={{
-              url: "./src/assets/images/icons/mail.svg",
-              alt: "icon mail",
-            }}
-            header={"Email"}
-            detail={"Chafikraden@gmail.com"}
-          />
-          <ContactCard
-            icon={{
-              url: "./src/assets/images/icons/graduation.svg",
-              alt: "icon graduation",
-            }}
-            header={"Education"}
-            detail={"B.Eng. in Electronics - KMITL"}
-          />
-          <ContactCard
-            icon={{
-              url: "./src/assets/images/icons/calendar-blue.svg",
-              alt: "icon calendar",
-            }}
-            header={"Experience"}
-            detail={"2+ years in Engineering"}
-          />
+          {contacts.map((contact) => (
+            <ContactCard
+              key={contact.id}
+              header={contact.header}
+              detail={contact.title}
+            >
+              {contact.icon}
+            </ContactCard>
+          ))}
         </section>
       </div>
     </div>

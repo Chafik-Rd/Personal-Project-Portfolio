@@ -9,8 +9,8 @@ export const Skills = () => {
       {/* animation scroll one line */}
       <div className="w-screen overflow-hidden hidden md:flex flex-col">
         <ul className="flex w-fit animate-scroll">
-          {[...techStacks, ...techStacks].map((techStack) => (
-            <SkillCard key={techStack.id} icon={techStack.icon} />
+          {[...techStacks, ...techStacks].map((techStack,index) => (
+            <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>
       </div>
@@ -18,13 +18,13 @@ export const Skills = () => {
       {/* animation scroll two line */}
       <div className="w-screen overflow-hidden flex md:hidden flex-col">
         <ul className="flex w-fit animate-scroll">
-          {[...firstHalf, ...firstHalf].map((techStack) => (
-            <SkillCard key={techStack.id} icon={techStack.icon} />
+          {[...firstHalf, ...firstHalf].map((techStack,index) => (
+            <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>
         <ul className="flex w-fit animate-scroll-black">
-          {[...secondHalf, ...secondHalf].map((techStack) => (
-            <SkillCard key={techStack.id} icon={techStack.icon} />
+          {[...secondHalf, ...secondHalf].map((techStack,index) => (
+            <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>
       </div>
