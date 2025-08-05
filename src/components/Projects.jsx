@@ -3,10 +3,14 @@ import { ProjectCard } from "./ProjectCard";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { projects } from "../data/projects";
+import { Link } from "react-router-dom";
 
 export const Project = () => {
   return (
-    <div id="projects" className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
+    <div
+      id="projects"
+      className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center"
+    >
       <PageHeader
         header={"Projects"}
         text={
@@ -16,7 +20,8 @@ export const Project = () => {
       <div className="flex flex-col md:flex-row gap-6 justify-between flex-wrap">
         {projects.map((project) => {
           return (
-            <ProjectCard key={project.id}
+            <ProjectCard
+              key={project.id}
               img={project.img}
               name={project.name}
               detail={project.detail}
@@ -25,14 +30,16 @@ export const Project = () => {
           );
         })}
       </div>
-      <Button
-        size="lg"
-        variant="outline"
-        className="text-xl text-mutedBlue-300 animate-bounce"
-      >
-        <ArrowDown strokeWidth={1.5} className="size-5" />
-        See more
-      </Button>
+      <Link to="allproject">
+        <Button
+          size="lg"
+          variant="outline"
+          className="text-xl text-mutedBlue-300 animate-bounce"
+        >
+          <ArrowDown strokeWidth={1.5} className="size-5" />
+          See more
+        </Button>
+      </Link>
     </div>
   );
 };

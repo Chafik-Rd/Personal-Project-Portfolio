@@ -1,26 +1,26 @@
-import { AboutMe } from "./components/AboutMe"
-import { Contact } from "./components/Contact"
-import { Experience } from "./components/Experience"
-import { LandingPage } from "./components/LandingPage"
-import { Navbar } from "./components/Navbar"
-import { Project } from "./components/Projects"
-import { Skills } from "./components/Skills"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AllProjects } from "./views/AllProjects";
+import { Layout } from "./components/Layout";
+import { Home } from "./views/Home";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: (
+      <div>
+        <h1>404 - Page Not Found 👨🏻‍🔧👨🏻‍🔧</h1>
+      </div>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      { path: "allproject", element: <AllProjects /> },
+    ],
+  },
+]);
 
-
-function App() {
-
-
-  return (
-    <div className="min-h-screen bg-linear-to-br from-mutedBlue-300 to-mutedBlue-200">
-      <Navbar/>
-      <LandingPage/>
-      <AboutMe/>
-      <Project/>
-      <Skills/>
-      <Experience/>
-      <Contact/>
-    </div>
-  )
+export function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App

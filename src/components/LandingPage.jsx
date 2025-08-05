@@ -56,8 +56,8 @@ export const LandingPage = () => {
         </div>
         <div className="flex gap-8 animate-float pt-10">
           {connectsMe.map((connectMe) => (
-            <a href={connectMe.link} target="_blank" rel="noopener noreferrer">
-              <Button key={connectMe.id} size="icon" variant="ghost">
+            <a key={connectMe.id} href={connectMe.link} target="_blank" rel="noopener noreferrer">
+              <Button size="icon" variant="ghost">
                 {connectMe.icon}
               </Button>
             </a>
