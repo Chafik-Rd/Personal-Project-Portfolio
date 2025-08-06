@@ -5,12 +5,17 @@ import { experience, education } from "../data/experienceEducation";
 
 export const Experience = () => {
   return (
-    <div id="experience" className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center">
+    <div
+      id="experience"
+      className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center"
+    >
       <PageHeader
         header={"Experience & Education"}
         text={"My professional journey and educational background"}
       />
+
       <div className="flex flex-col md:flex-row gap-6">
+        {/* Experience */}
         <section className="flex flex-col gap-3 w-full">
           <div className="flex items-center gap-2">
             <Building size={28} className="text-mutedBlue-300" />
@@ -19,7 +24,8 @@ export const Experience = () => {
             </h3>
           </div>
           {experience.map((item) => (
-            <ExperienceCard key={item.id}
+            <ExperienceCard
+              key={item.id}
               name={item.jobPosition}
               tag={item.jobType}
               organization={item.company}
@@ -29,6 +35,8 @@ export const Experience = () => {
             />
           ))}
         </section>
+
+        {/* Education */}
         <section className="flex flex-col gap-3 w-full">
           <div className="flex items-center gap-2">
             <GraduationCap size={28} className="text-mutedBlue-300" />

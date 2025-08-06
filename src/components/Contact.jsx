@@ -64,6 +64,7 @@ export const Contact = () => {
         }
       />
       <div className="flex flex-col md:flex-row gap-8 max-w-336 w-full">
+        {/* send message */}
         <section className="w-full">
           <Card className="h-full">
             <CardHeader>
@@ -94,6 +95,8 @@ export const Contact = () => {
             </CardContent>
           </Card>
         </section>
+
+        {/* contact */}
         <section className="flex flex-col gap-8 w-full">
           <h3 className="text-2xl font-medium">Contact Information</h3>
           <div className="flex flex-col gap-3">

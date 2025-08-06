@@ -17,6 +17,7 @@ export const Project = () => {
           "Here are some of the projects I've worked on, showcasing my skills in frontend development"
         }
       />
+      {/* project card */}
       <div className="flex flex-col md:flex-row gap-6 justify-between flex-wrap">
         {projects.slice(0, 4).map((project) => {
           return (
@@ -32,6 +33,7 @@ export const Project = () => {
           );
         })}
       </div>
+
       <Link to="allproject">
         <Button
           size="lg"

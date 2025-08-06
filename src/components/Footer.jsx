@@ -8,6 +8,7 @@ export const Footer = () => {
     <div className="bg-white px-4 md:px-12 flex flex-col justify-center">
       <div className="flex flex-col md:flex-row justify-between items-center gap-2 border-t py-2">
         <p>© 2025 Made withby Chafik Raden-ahmad</p>
+
         <Link
           to={`${location === "/allproject" ? "allProjects" : "landingPage"}`}
           smooth={true}
