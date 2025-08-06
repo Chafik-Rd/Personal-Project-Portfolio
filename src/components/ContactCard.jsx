@@ -6,7 +6,7 @@ export const ContactCard = ({ header, detail, children,link }) => {
           {children}
         </div>
         <div>
-          <p className="font-medium text-xl">{header}</p>
+          <p className="font-medium text-lg sm:text-xl">{header}</p>
           <p className="text-mutedBlueGray mt-1">{detail}</p>
         </div>
       </div>

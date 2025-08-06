@@ -1,17 +1,37 @@
 import { ArrowLeft } from "lucide-react";
 import { projects } from "../data/projects";
-import { Link } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectCard";
 import { PageHeader } from "../components/PageHeader";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { scroller } from "react-scroll";
+
 export const AllProjects = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // get state from before page and scroll
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      scroller.scrollTo(location.state.scrollTo, {
+        duration: 500,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }, [location]);
+
   return (
-    <div id="allProjects" className="py-10 px-4 lg:px-12 bg-white">
-      <Link to="/">
-        <p className="flex gap-1 text-lg ml-10">
-          <ArrowLeft strokeWidth={1.5} />
-          Back to home
-        </p>
-      </Link>
+    <div id="allProjects" className="py-10 px-6 lg:px-12 bg-white">
+      {/* change page with navigate and send state to next page */}
+      <p
+        onClick={() => navigate("/", { state: { scrollTo: "projects" } })}
+        className="flex gap-1 text-base sm:text-lg cursor-pointer"
+      >
+        <ArrowLeft strokeWidth={1.5} />
+        Back to home
+      </p>
+
       <div className="flex flex-col gap-14 items-center">
         <PageHeader
           header={"Projects"}

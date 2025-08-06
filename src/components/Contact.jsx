@@ -55,7 +55,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
+      className="py-16 px-6 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
     >
       <PageHeader
         header={"Get In Touch"}
@@ -68,7 +68,9 @@ export const Contact = () => {
         <section className="w-full">
           <Card className="h-full">
             <CardHeader>
-              <CardTitle className="text-3xl">Send me a message</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl">
+                Send me a message
+              </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-8">
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
@@ -90,7 +92,7 @@ export const Contact = () => {
               </form>
               <Button type="submit" size="md" className="w-full">
                 <Send size={16} />
-                About Me
+                Send Message
               </Button>
             </CardContent>
           </Card>
@@ -98,7 +100,9 @@ export const Contact = () => {
 
         {/* contact */}
         <section className="flex flex-col gap-8 w-full">
-          <h3 className="text-2xl font-medium">Contact Information</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-medium">
+            Contact Information
+          </h3>
           <div className="flex flex-col gap-3">
             {contacts.map((contact) => (
               <ContactCard
@@ -128,16 +132,18 @@ export const Contact = () => {
               ))}
             </div>
           </div>
+
+          {/* card */}
           <div className="flex flex-col items-center gap-3 bg-linear-to-br from-mutedBlue-300 to-turquoise-400 px-6 py-4 rounded-xl text-white text-center">
-            <h4 className="text-2xl font-medium">Let's work together!</h4>
-            <p className="text-xl">
+            <h4 className="text-xl sm:text-2xl font-medium">Let's work together!</h4>
+            <p className="text-lg sm:text-xl">
               I'm currently available for freelance work and open to new
               opportunities.
             </p>
             <Button
               size="md"
               variant="outline"
-              className="text-mutedBlue-300 text-lg w-fit"
+              className="text-mutedBlue-300 sm:text-lg w-fit"
             >
               Download Resume
             </Button>

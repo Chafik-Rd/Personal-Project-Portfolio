@@ -3,13 +3,29 @@ import { ProjectCard } from "./ProjectCard";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { projects } from "../data/projects";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { scroller } from "react-scroll";
 
 export const Project = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // get state from before page and scroll
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      scroller.scrollTo(location.state.scrollTo, {
+        duration: 500,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }, [location]);
+
   return (
     <div
       id="projects"
-      className="py-16 px-4 lg:px-12 bg-white flex flex-col gap-14 items-center"
+      className="py-16 px-6 lg:px-12 bg-white flex flex-col gap-14 items-center"
     >
       <PageHeader
         header={"Projects"}
@@ -34,16 +50,18 @@ export const Project = () => {
         })}
       </div>
 
-      <Link to="allproject">
-        <Button
-          size="lg"
-          variant="outline"
-          className="text-xl text-mutedBlue-300 animate-bounce"
-        >
-          <ArrowDown strokeWidth={1.5} className="size-5" />
-          See more
-        </Button>
-      </Link>
+      {/* change page with navigate and send state to next page */}
+      <Button
+        onClick={() =>
+          navigate("allproject", { state: { scrollTo: "allProjects" } })
+        }
+        size="lg"
+        variant="outline"
+        className="text-xl text-mutedBlue-300 animate-bounce"
+      >
+        <ArrowDown strokeWidth={1.5} className="size-5" />
+        See more
+      </Button>
     </div>
   );
 };

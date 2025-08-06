@@ -13,11 +13,12 @@ export const Footer = () => {
           to={`${location === "/allproject" ? "allProjects" : "landingPage"}`}
           smooth={true}
           duration={500}
+          className="ml-auto md:ml-0"
         >
           <Button
             size="md"
             variant="outline"
-            className="text-base py-2 animate-bounce"
+            className="text-base py-2 md:animate-bounce"
           >
             <ArrowUp strokeWidth={1.5} className="size-5" />
             Back to top

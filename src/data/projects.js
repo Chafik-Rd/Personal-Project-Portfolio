@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 4,
-    name: "LeftoverChef",
+    name: "LeftoverChef (2025)",
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     id: 3,
-    name: "web pprtfolio",
+    name: "portfolio (2025)",
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 2,
-    name: "web pprtfolio V.1",
+    name: "portfolio V.1 (2024)",
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {
@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     id: 1,
-    name: "web prokemon API",
+    name: "pokemon API (2024)",
     detail: "",
     techStacks: ["React", "TailwindCSS"],
     img: {

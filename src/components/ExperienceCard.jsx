@@ -10,10 +10,10 @@ export const ExperienceCard = ({
   detail,
 }) => {
   return (
-    <div className="max-w-170 w-full h-full rounded-xl p-4 md:p-6 shadow-md hover:shadow-lg">
+    <div className="max-w-170 w-full h-full rounded-xl p-6 shadow-md hover:shadow-lg">
       {/* header */}
       <div className="flex justify-between items-center font-medium">
-        <h4 className="text-xl md:text-2xl">{name}</h4>
+        <h4 className="text-lg sm:text-xl md:text-2xl">{name}</h4>
         {tag ? <Badge variant="outline">{tag}</Badge> : <></>}
       </div>
       <div className="flex flex-col gap-4">
@@ -22,7 +22,7 @@ export const ExperienceCard = ({
         </h5>
 
         {/* date & location */}
-        <div className="flex gap-1 md:gap-6 text-mutedBlueGray text-sm md:text-base">
+        <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 text-mutedBlueGray text-sm md:text-base">
           <section className="flex gap-1">
             <Calendar strokeWidth={1.5} size={16} />
             <p>{date}</p>

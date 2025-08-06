@@ -27,7 +27,7 @@ const contacts = [
   {
     id: 1,
     header: "Experience",
-    title: "2+ years in Engineering",
+    title: "2+ years in Electrical Engineering",
     icon: <Calendar className="m-auto" />,
     link: "#",
   },
@@ -37,7 +37,7 @@ export const AboutMe = () => {
   return (
     <div
       id="about"
-      className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
+      className="py-16 px-6 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
     >
       <PageHeader
         header={"About me"}
@@ -65,7 +65,7 @@ export const AboutMe = () => {
 
         {/* contact */}
         <section className="flex flex-col gap-4 h-full w-full">
-          <h3 className="text-2xl font-medium">Frontend Developer</h3>
+          <h3 className="text-xl sm:text-2xl font-medium">Frontend Developer</h3>
           <p className="text-mutedBlueGray">
             Passionate Frontend Developer based in Bangkok with a background in
             Electronics Engineering. I specialize in building responsive, modern
