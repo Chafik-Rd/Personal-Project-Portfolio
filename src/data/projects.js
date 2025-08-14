@@ -20,7 +20,7 @@ export const projects = [
       url: "./images/web-portfolio.png",
       alt: "web portfolio",
     },
-    webDemo: "https://personal-project-portfolio-three.vercel.app/",
+    webDemo: "https://portfolio-chafik.vercel.app/",
     gitHub: "https://github.com/Chafik-Rd/Personal-Project-Portfolio",
   },
   {

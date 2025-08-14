@@ -4,7 +4,7 @@ import { Globe, Github } from "lucide-react";
 
 export const ProjectCard = ({ img, name, detail, tags, webDemo, gitHub }) => {
   return (
-    <div className="max-w-150 w-full bg-white rounded-xl shadow-md mx-auto">
+    <div className="max-w-150 w-full bg-white rounded-xl shadow-md mx-auto hover:shadow-xl">
       <div className="sm:h-48 w-full overflow-hidden">
         <img src={img.url} alt={img.alt} className="rounded-t-xl w-full" />
       </div>
