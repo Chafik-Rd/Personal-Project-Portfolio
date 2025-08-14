@@ -83,6 +83,13 @@ export const techStacks = [
       alt: "icon vite",
     },
   },
+  {
+    id: 13,
+    icon: {
+      url: "./images/skill-icons/axios.svg",
+      alt: "icon axios",
+    },
+  },
 ];
 
 const halfLength = Math.floor(techStacks.length / 2);
