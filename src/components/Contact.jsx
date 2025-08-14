@@ -100,8 +100,7 @@ export const Contact = () => {
               Let's work together!
             </h4>
             <p className="text-lg sm:text-xl">
-              I'm currently available for freelance work and open to new
-              opportunities.
+              I'm eager to grow, learn, and take on new challenges.
             </p>
             <Button
               size="md"
