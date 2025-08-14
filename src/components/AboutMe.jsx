@@ -1,37 +1,6 @@
+import { connectsAboutMe } from "../data/contacts";
 import { ContactCard } from "./ContactCard";
 import { PageHeader } from "./PageHeader";
-import { MapPin, Mail, Calendar, GraduationCap } from "lucide-react";
-
-const contacts = [
-  {
-    id: 4,
-    header: "Location",
-    title: "Bangkok, Thailand",
-    icon: <MapPin className="m-auto" />,
-    link: "#",
-  },
-  {
-    id: 3,
-    header: "Email",
-    title: "Chafikraden@gmail.com",
-    icon: <Mail className="m-auto" />,
-    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chafikraden@gmail.com",
-  },
-  {
-    id: 2,
-    header: "Education",
-    title: "B.Eng. in Electronics - KMITL",
-    icon: <GraduationCap className="m-auto" />,
-    link: "#",
-  },
-  {
-    id: 1,
-    header: "Experience",
-    title: "2+ years in Electrical Engineering",
-    icon: <Calendar className="m-auto" />,
-    link: "#",
-  },
-];
 
 export const AboutMe = () => {
   return (
@@ -65,19 +34,24 @@ export const AboutMe = () => {
 
         {/* contact */}
         <section className="flex flex-col gap-4 h-full w-full">
-          <h3 className="text-xl sm:text-2xl font-medium">Frontend Developer</h3>
+          <h3 className="text-xl sm:text-2xl font-medium">
+            Frontend Developer
+          </h3>
           <p className="text-mutedBlueGray">
-            Passionate Frontend Developer based in Bangkok with a background in
-            Electronics Engineering. I specialize in building responsive, modern
-            web apps using React and constantly seek to improve my skills
-            through hands-on projects and learning.
+            A self-taught Frontend Developer with over 2 years of engineering
+            experience and a strong growth mindset. With a background in
+            Electronics Engineering, I specialize in building responsive,
+            user-friendly web apps using React, HTML, CSS, and JavaScript.
+            Passionate about continuous learning, problem-solving, and
+            collaborating effectively in fast-paced environments.
           </p>
-          {contacts.map((contact) => (
+          {connectsAboutMe.map((contact) => (
             <ContactCard
               key={contact.id}
               header={contact.header}
               detail={contact.title}
               link={contact.link}
+              icon={contact.icon}
             >
               {contact.icon}
             </ContactCard>

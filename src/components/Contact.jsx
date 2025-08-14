@@ -2,52 +2,15 @@ import { PageHeader } from "./PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Send, Linkedin, Github, MapPin, Phone, Mail } from "lucide-react";
+import { Send, Linkedin, Github } from "lucide-react";
 import { ContactCard } from "./ContactCard";
-
-const contacts = [
-  {
-    id: 3,
-    header: "Phone",
-    title: "099-3108320",
-    icon: <Phone className="m-auto" />,
-    link: "#",
-  },
-  {
-    id: 2,
-    header: "Location",
-    title: "Bangkok, Thailand",
-    icon: <MapPin className="m-auto" />,
-    link: "#",
-  },
-  {
-    id: 1,
-    header: "Email",
-    title: "Chafikraden@gmail.com",
-    icon: <Mail className="m-auto" />,
-    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chafikraden@gmail.com",
-  },
-];
-const connectsMe = [
-  {
-    id: 3,
-    header: "Github",
-    link: "https://github.com/Chafik-Rd",
-    icon: <Github className="size-5" />,
-  },
-  {
-    id: 2,
-    header: "Linkedin",
-    link: "https://www.linkedin.com/in/chafik-rd/",
-    icon: <Linkedin className="size-5" />,
-  },
-  {
-    id: 1,
-    header: "Telegram",
-    link: "https://t.me/ChafikRd",
-    icon: <Send className="size-5" />,
-  },
-];
+import { connectsMe, contacts } from "../data/contacts";
+import { ContactIcon } from "./ContactIcon";
+const icons = {
+  github: Github,
+  linkedin: Linkedin,
+  send: Send,
+};
 export const Contact = () => {
   const handleSubmit = () => {
     console.log("");
@@ -110,32 +73,32 @@ export const Contact = () => {
                 header={contact.header}
                 detail={contact.title}
                 link={contact.link}
-              >
-                {contact.icon}
-              </ContactCard>
+                icon={contact.icon}
+              />
             ))}
           </div>
           <div>
             <h4 className="text-xl font-medium mb-2">Connect with me</h4>
             <div className="flex gap-8">
-              {connectsMe.map((connectMe) => (
-                <a
-                  key={connectMe.id}
-                  href={connectMe.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button size="icon" variant="outline">
-                    {connectMe.icon}
-                  </Button>
-                </a>
-              ))}
+              {connectsMe.map((connectMe) => {
+                const IconComponent = icons[connectMe.icon];
+                return (
+                  <ContactIcon
+                    key={connectMe.id}
+                    href={connectMe.link}
+                    icon={connectMe.icon}
+                    variant={"outline"}
+                  />
+                );
+              })}
             </div>
           </div>
 
           {/* card */}
           <div className="flex flex-col items-center gap-3 bg-linear-to-br from-mutedBlue-300 to-turquoise-400 px-6 py-4 rounded-xl text-white text-center">
-            <h4 className="text-xl sm:text-2xl font-medium">Let's work together!</h4>
+            <h4 className="text-xl sm:text-2xl font-medium">
+              Let's work together!
+            </h4>
             <p className="text-lg sm:text-xl">
               I'm currently available for freelance work and open to new
               opportunities.

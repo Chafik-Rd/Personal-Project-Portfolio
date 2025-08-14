@@ -32,7 +32,9 @@ export const education = [
     institution: "Generation Tahiland",
     date: "Jun. 2025 - Sep. 2025",
     location: "Bangkok, Thailand",
-    detail: ["Specialized in electronics engineering with focus on digital systems, embedded programming, and circuit design."],
+    detail: [
+      "Focused on building full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js) in an Agile environment.",
+    ],
   },
   {
     id: 1,
@@ -40,6 +42,8 @@ export const education = [
     institution: "King Mongkut's Institute of Technology Ladkrabang",
     date: "2018 - 2022",
     location: "Bangkok, Thailand",
-    detail: ["Specialized in electronics engineering with focus on digital systems, embedded programming, and circuit design."],
+    detail: [
+      "Developed a Python-based Optical Motion Capture system for physical therapy, and built IoT solutions using Raspberry Pi and ESP32",
+    ],
   },
 ];

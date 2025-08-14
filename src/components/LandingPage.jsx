@@ -1,28 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mouse } from "lucide-react";
-import { Send, Linkedin, Github } from "lucide-react";
 import { Link } from "react-scroll";
-
-const connectsMe = [
-  {
-    id: 3,
-    header: "Github",
-    link: "https://github.com/Chafik-Rd",
-    icon: <Github className="size-5" />,
-  },
-  {
-    id: 2,
-    header: "Linkedin",
-    link: "https://www.linkedin.com/in/chafik-rd/",
-    icon: <Linkedin className="size-5" />,
-  },
-  {
-    id: 1,
-    header: "Telegram",
-    link: "https://t.me/ChafikRd",
-    icon: <Send className="size-5" />,
-  },
-];
+import { connectsMe } from "../data/contacts";
+import { ContactIcon } from "./ContactIcon";
 
 export const LandingPage = () => {
   return (
@@ -39,44 +19,44 @@ export const LandingPage = () => {
         </h1>
         <p className="text-3xl md:text-4xl">Frontend Developer</p>
         <p className="text-base md:text-xl text-center">
-          Frontend Developer with a background in Electronics Engineering,
-          passionate about creating user-friendly interfaces with React. Skilled
-          in teamwork, problem-solving, and continuous learning.
+          Self-taught Frontend Developer with a growth mindset, crafting
+          user-friendly React interfaces and continuously learning new skills.
         </p>
 
         {/* button */}
         <div className="flex flex-col md:flex-row gap-6 justify-center w-full">
-          <Link to="about" smooth={true} duration={500} className="w-full md:w-fit">
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="w-full md:w-fit"
+          >
             <Button size="lg" className="text-xl bg-mutedBlue-100 w-full">
               <ArrowDown strokeWidth={1.5} className="size-5" />
               About Me
             </Button>
           </Link>
           <a className="w-full md:w-fit">
-          <Button
-            size="lg"
-            variant="secondary"
-            className="text-xl text-mutedBlue-300 w-full"
-          >
-            <Download strokeWidth={1.5} className="size-5" />
-            Resume
-          </Button>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-xl text-mutedBlue-300 w-full"
+            >
+              <Download strokeWidth={1.5} className="size-5" />
+              Resume
+            </Button>
           </a>
         </div>
 
         {/* contact */}
         <div className="flex gap-8 animate-float pt-10">
           {connectsMe.map((connectMe) => (
-            <a
+            <ContactIcon
               key={connectMe.id}
               href={connectMe.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="icon" variant="ghost">
-                {connectMe.icon}
-              </Button>
-            </a>
+              icon={connectMe.icon}
+              variant={"ghost"}
+            />
           ))}
         </div>
       </div>
