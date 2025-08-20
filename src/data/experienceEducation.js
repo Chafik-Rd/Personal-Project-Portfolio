@@ -30,7 +30,7 @@ export const education = [
     id: 2,
     name: "Junior Software Developer Bootcamp",
     institution: "Generation Tahiland",
-    date: "Jun. 2025 - Sep. 2025",
+    date: "Jun. 2025 - Present",
     location: "Bangkok, Thailand",
     detail: [
       "Focused on building full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js) in an Agile environment.",
