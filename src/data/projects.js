@@ -9,8 +9,8 @@ export const projects = [
       url: "./images/web-leftoverChef.png",
       alt: "web portfolio",
     },
-    webDemo: "https://react-personal-project-chafik-rd.vercel.app/",
-    gitHub: "",
+    webDemo: "https://leftoverchef.vercel.app/",
+    gitHub: "https://github.com/Chafik-Rd/Personal-Project-LeftoverChef",
   },
   {
     id: 3,
