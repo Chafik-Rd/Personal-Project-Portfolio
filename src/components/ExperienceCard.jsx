@@ -23,11 +23,11 @@ export const ExperienceCard = ({
 
         {/* date & location */}
         <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 text-mutedBlueGray text-sm md:text-base">
-          <section className="flex gap-1">
+          <section className="flex gap-1 items-center">
             <Calendar strokeWidth={1.5} size={16} />
             <p>{date}</p>
           </section>
-          <section className="flex gap-1">
+          <section className="flex gap-1 items-center">
             <MapPin strokeWidth={1.5} size={16} />
             <p>{location}</p>
           </section>
