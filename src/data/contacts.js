@@ -71,3 +71,6 @@ export const connectsAboutMe = [
     link: "#",
   },
 ];
+
+export const linkCV =
+  "https://drive.google.com/file/d/1HkoteK4ix5XdcPsyUKiajxyW4thvr-Oe/view?usp=sharing";

@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 4,
-    name: "LeftoverChef (2025)",
+    name: "LeftoverChef (Present)",
     detail: `A full-stack MERN application that helps manage fridge ingredients and suggests recipes.
     Developed from scratch, covering UX/UI design, database management, and API integration.`,
     techStacks: ["React", "Node.js", "AxiosAPI", "MongoDB"],

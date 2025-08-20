@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Send, Linkedin, Github } from "lucide-react";
 import { ContactCard } from "./ContactCard";
-import { connectsMe, contacts } from "../data/contacts";
+import { connectsMe, contacts, linkCV } from "../data/contacts";
 import { ContactIcon } from "./ContactIcon";
 const icons = {
   github: Github,
@@ -102,6 +102,7 @@ export const Contact = () => {
             <p className="text-lg sm:text-xl">
               I'm eager to grow, learn, and take on new challenges.
             </p>
+            <a href={linkCV} target="_blank" rel="noopener noreferrer">
             <Button
               size="md"
               variant="outline"
@@ -109,6 +110,7 @@ export const Contact = () => {
             >
               Download Resume
             </Button>
+            </a>
           </div>
         </section>
       </div>

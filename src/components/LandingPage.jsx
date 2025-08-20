@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mouse } from "lucide-react";
 import { Link } from "react-scroll";
-import { connectsMe } from "../data/contacts";
+import { connectsMe, linkCV } from "../data/contacts";
 import { ContactIcon } from "./ContactIcon";
 
 export const LandingPage = () => {
@@ -36,7 +36,7 @@ export const LandingPage = () => {
               About Me
             </Button>
           </Link>
-          <a className="w-full md:w-fit">
+          <a href={linkCV} target="_blank" rel="noopener noreferrer" className="w-full md:w-fit">
             <Button
               size="lg"
               variant="secondary"
