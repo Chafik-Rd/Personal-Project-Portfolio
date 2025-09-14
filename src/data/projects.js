@@ -22,7 +22,7 @@ export const projects = [
       alt: "web dailyLean",
     },
     webDemo: "https://front-end-final-project-cyan.vercel.app/",
-    gitHub: "https://github.com/Go2Dev101/FrontEnd-FinalProject",
+    gitHub: "https://github.com/Chafik-Rd/Group-Project-DailyLean",
   },
   {
     id: 3,
