@@ -17,9 +17,9 @@ export const LandingPage = () => {
           <br />
           <span className="text-turquoise-400">Raden-ahmad</span>
         </h1>
-        <p className="text-3xl md:text-4xl">Frontend Developer</p>
+        <p className="text-3xl md:text-4xl">Full Stack Developer</p>
         <p className="text-base md:text-xl text-center">
-          Self-taught Frontend Developer with a growth mindset, crafting
+          Self-taught Full Stack Developer with a growth mindset, crafting
           user-friendly React interfaces and continuously learning new skills.
         </p>
 

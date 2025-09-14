@@ -35,15 +35,15 @@ export const AboutMe = () => {
         {/* contact */}
         <section className="flex flex-col gap-4 h-full w-full">
           <h3 className="text-xl sm:text-2xl font-medium">
-            Frontend Developer
+            Full Stack Developer
           </h3>
           <p className="text-mutedBlueGray">
-            A self-taught Frontend Developer with over 2 years of engineering
-            experience and a strong growth mindset. With a background in
-            Electronics Engineering, I specialize in building responsive,
-            user-friendly web apps using React, HTML, CSS, and JavaScript.
-            Passionate about continuous learning, problem-solving, and
-            collaborating effectively in fast-paced environments.
+            Full Stack Developer with a background in Electronics Engineering
+            and 2+ years of engineering experience. Passionate about creating
+            user-friendly interfaces and experienced in building full-stack apps
+            using the MERN stack. Strong in problem-solving, teamwork, and
+            cross-functional communication, with a growth mindset and commitment
+            to continuous learning.
           </p>
           {connectsAboutMe.map((contact) => (
             <ContactCard
