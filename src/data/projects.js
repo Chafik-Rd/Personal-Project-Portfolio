@@ -1,16 +1,28 @@
 export const projects = [
   {
-    id: 4,
+    id: 5,
     name: "LeftoverChef (Present)",
     detail: `A full-stack MERN application that helps manage fridge ingredients and suggests recipes.
     Developed from scratch, covering UX/UI design, database management, and API integration.`,
     techStacks: ["React", "Node.js", "AxiosAPI", "MongoDB"],
     img: {
       url: "./images/web-leftoverChef.png",
-      alt: "web portfolio",
+      alt: "web leftoverChef",
     },
     webDemo: "https://leftoverchef.vercel.app/",
     gitHub: "https://github.com/Chafik-Rd/Personal-Project-LeftoverChef",
+  },
+  {
+    id: 4,
+    name: "DailyLean (Present)",
+    detail: `Collaborated in a 5-member Agile team to build a MERN-based meal subscription platform, delivering a functional MVP in 3 sprints while enhancing my skills in teamwork, planning, and problem-solving.`,
+    techStacks: ["React", "Express.js", "AxiosAPI", "MongoDB"],
+    img: {
+      url: "./images/web-dailyLean.png",
+      alt: "web dailyLean",
+    },
+    webDemo: "https://front-end-final-project-cyan.vercel.app/",
+    gitHub: "https://github.com/Go2Dev101/FrontEnd-FinalProject",
   },
   {
     id: 3,
