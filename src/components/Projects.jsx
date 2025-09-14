@@ -30,7 +30,7 @@ export const Project = () => {
       <PageHeader
         header={"Projects"}
         text={
-          "Here are some of the projects I've worked on, showcasing my skills in frontend development"
+          "Here are some of the projects I've worked on, showcasing my skills in full stack development"
         }
       />
       {/* project card */}
