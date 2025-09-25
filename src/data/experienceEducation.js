@@ -28,9 +28,9 @@ export const experience = [
 export const education = [
   {
     id: 2,
-    name: "Junior Software Developer Bootcamp",
+    name: "Junior Software Developer Program",
     institution: "Generation Tahiland",
-    date: "Jun. 2025 - Present",
+    date: "Jun. 2025 - Sep. 2025",
     location: "Bangkok, Thailand",
     detail: [
       "Focused on building full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js) in an Agile environment.",
