@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: "DailyLean (Present)",
+    name: "DailyLean (2025)",
     detail: `Collaborated in a 5-member Agile team to build a MERN-based meal subscription platform, delivering a functional MVP in 3 sprints while enhancing my skills in teamwork, planning, and problem-solving.`,
     techStacks: ["React", "Express.js", "AxiosAPI", "MongoDB"],
     img: {
