@@ -3,27 +3,30 @@ import { techStacks, firstHalf, secondHalf } from "../data/techStacks";
 import { SkillCard } from "./SkillCard";
 export const Skills = () => {
   return (
-    <div id="techStack" className="py-16 px-4 md:px-12 bg-softWhite flex flex-col gap-14 items-center">
+    <div
+      id="techStack"
+      className="bg-softWhite flex flex-col items-center gap-14 px-4 py-16 md:px-12"
+    >
       <PageHeader header={"Tech Stack"} />
 
       {/* animation scroll one line */}
-      <div className="w-screen overflow-hidden hidden md:flex flex-col">
-        <ul className="flex w-fit animate-scroll">
-          {[...techStacks, ...techStacks].map((techStack,index) => (
+      <div className="hidden w-screen flex-col overflow-hidden md:flex">
+        <ul className="animate-scroll flex w-fit">
+          {[...techStacks, ...techStacks].map((techStack, index) => (
             <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>
       </div>
 
       {/* animation scroll two line */}
-      <div className="w-screen overflow-hidden flex md:hidden flex-col">
-        <ul className="flex w-fit animate-scroll">
-          {[...firstHalf, ...firstHalf].map((techStack,index) => (
+      <div className="flex w-screen flex-col overflow-hidden md:hidden">
+        <ul className="animate-scroll flex w-fit">
+          {[...firstHalf, ...firstHalf].map((techStack, index) => (
             <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>
-        <ul className="flex w-fit animate-scroll-black">
-          {[...secondHalf, ...secondHalf].map((techStack,index) => (
+        <ul className="animate-scroll-black flex w-fit">
+          {[...secondHalf, ...secondHalf].map((techStack, index) => (
             <SkillCard key={index} icon={techStack.icon} />
           ))}
         </ul>

@@ -31,26 +31,26 @@ export const Navbar = () => {
             scrollY > 100 && "bg-white/80"
           }`}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-4">
-            <section className="flex justify-between items w-full md:w-fit">
-              <p className="text-3xl text-transparent bg-clip-text bg-linear-to-br from-mutedBlue-300 to-turquoise-400 font-bold">
+          <div className="flex flex-col items-center justify-between px-4 py-4 md:flex-row md:px-12">
+            <section className="items flex w-full justify-between md:w-fit">
+              <p className="from-mutedBlue-300 to-turquoise-400 bg-linear-to-br bg-clip-text text-3xl font-bold text-transparent">
                 CR
               </p>
               {isMenu ? (
                 <X
                   onClick={() => setIsMenu(false)}
-                  className="md:hidden my-auto rounded hover:bg-mutedBlue-100"
+                  className="hover:bg-mutedBlue-100 my-auto rounded md:hidden"
                 />
               ) : (
                 <AlignJustify
                   onClick={() => setIsMenu(true)}
-                  className="md:hidden my-auto rounded hover:bg-mutedBlue-100"
+                  className="hover:bg-mutedBlue-100 my-auto rounded md:hidden"
                 />
               )}
             </section>
 
             {/* Desktop Navigation */}
-            <ul className="hidden md:flex gap-6">
+            <ul className="hidden gap-6 md:flex">
               {navItems.map((item) => (
                 <li key={item.id} className="cursor-pointer hover:scale-95">
                   <Link to={item.link} smooth={true} duration={500}>
@@ -62,11 +62,11 @@ export const Navbar = () => {
 
             {/* Mobile Navigation */}
             {isMenu && (
-              <ul className="flex flex-col md:hidden  bg-white w-full p-4 rounded-lg shadow">
+              <ul className="flex w-full flex-col rounded-lg bg-white p-4 shadow md:hidden">
                 {navItems.map((item) => (
                   <li
                     key={item.id}
-                    className="cursor-pointer rounded-lg p-2 hover:bg-turquoise-100"
+                    className="hover:bg-turquoise-100 cursor-pointer rounded-lg p-2"
                   >
                     <Link to={item.link} smooth={true} duration={500}>
                       {item.menu}

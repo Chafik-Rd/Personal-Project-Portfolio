@@ -25,7 +25,7 @@ export const Project = () => {
   return (
     <div
       id="projects"
-      className="py-16 px-6 lg:px-12 bg-white flex flex-col gap-14 items-center"
+      className="flex flex-col items-center gap-14 bg-white px-6 py-16 lg:px-12"
     >
       <PageHeader
         header={"Projects"}
@@ -34,20 +34,23 @@ export const Project = () => {
         }
       />
       {/* project card */}
-      <div className="flex flex-col md:flex-row gap-6 justify-between flex-wrap">
-        {projects.slice(0, 4).map((project) => {
-          return (
-            <ProjectCard
-              key={project.id}
-              img={project.img}
-              name={project.name}
-              detail={project.detail}
-              tags={project.techStacks}
-              webDemo={project.webDemo}
-              gitHub={project.gitHub}
-            />
-          );
-        })}
+      <div className="flex flex-col flex-wrap justify-between gap-6 md:flex-row">
+        {projects
+          .sort((a, b) => b.id - a.id)
+          .filter((project) => project.pin === true)
+          .map((project) => {
+            return (
+              <ProjectCard
+                key={project.id}
+                img={project?.img}
+                name={project.name}
+                detail={project.detail}
+                tags={project.techStacks}
+                webDemo={project?.webDemo}
+                gitHub={project.gitHub}
+              />
+            );
+          })}
       </div>
 
       {/* change page with navigate and send state to next page */}
@@ -57,7 +60,7 @@ export const Project = () => {
         }
         size="lg"
         variant="outline"
-        className="text-xl text-mutedBlue-300 animate-bounce"
+        className="text-mutedBlue-300 animate-bounce text-xl"
       >
         <ArrowDown strokeWidth={1.5} className="size-5" />
         See more

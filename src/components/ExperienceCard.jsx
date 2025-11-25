@@ -10,24 +10,24 @@ export const ExperienceCard = ({
   detail,
 }) => {
   return (
-    <div className="max-w-170 w-full h-full rounded-xl p-6 shadow-md hover:shadow-lg">
+    <div className="h-full w-full max-w-170 rounded-xl p-6 shadow-md hover:shadow-lg">
       {/* header */}
-      <div className="flex justify-between items-center font-medium">
+      <div className="flex items-center justify-between font-medium">
         <h4 className="text-lg sm:text-xl md:text-2xl">{name}</h4>
         {tag ? <Badge variant="outline">{tag}</Badge> : <></>}
       </div>
       <div className="flex flex-col gap-4">
-        <h5 className="text-base md:text-xl font-medium text-mutedBlue-300">
+        <h5 className="text-mutedBlue-300 text-base font-medium md:text-xl">
           {organization}
         </h5>
 
         {/* date & location */}
-        <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 text-mutedBlueGray text-sm md:text-base">
-          <section className="flex gap-1 items-center">
+        <div className="text-mutedBlueGray flex flex-col gap-2 text-sm md:text-base lg:flex-row lg:gap-6">
+          <section className="flex items-center gap-1">
             <Calendar strokeWidth={1.5} size={16} />
             <p>{date}</p>
           </section>
-          <section className="flex gap-1 items-center">
+          <section className="flex items-center gap-1">
             <MapPin strokeWidth={1.5} size={16} />
             <p>{location}</p>
           </section>

@@ -31,11 +31,11 @@ export const Contact = () => {
         import.meta.env.VITE_YOUR_SERVICE_ID,
         import.meta.env.VITE_YOUR_TEMPLATE_ID,
         form,
-        import.meta.env.VITE_YOUR_PUBLIC_KEY
+        import.meta.env.VITE_YOUR_PUBLIC_KEY,
       )
       .then(
         () => alert("✅ Message sent successfully!"),
-        (error) => alert("❌ Failed to send: " + error.text)
+        (error) => alert("❌ Failed to send: " + error.text),
       );
 
     setForm({
@@ -47,7 +47,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-16 px-6 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
+      className="bg-softWhite flex flex-col items-center gap-14 px-6 py-16 md:px-12"
     >
       <PageHeader
         header={"Get In Touch"}
@@ -55,7 +55,7 @@ export const Contact = () => {
           "I'm always open to discussing new opportunities, projects, or just having a conversation about technology"
         }
       />
-      <div className="flex flex-col md:flex-row gap-8 max-w-336 w-full">
+      <div className="flex w-full max-w-336 flex-col gap-8 md:flex-row">
         {/* send message */}
         <section className="w-full">
           <Card className="h-full">
@@ -96,7 +96,7 @@ export const Contact = () => {
                   <textarea
                     onChange={handleChange}
                     placeholder="Your message..."
-                    className="block border-1 p-4 rounded-md w-full h-60"
+                    className="block h-60 w-full rounded-md border-1 p-4"
                     name="message"
                     value={form.message}
                     required
@@ -119,8 +119,8 @@ export const Contact = () => {
         </section>
 
         {/* contact */}
-        <section className="flex flex-col gap-8 w-full">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-medium">
+        <section className="flex w-full flex-col gap-8">
+          <h3 className="text-xl font-medium sm:text-2xl md:text-3xl">
             Contact Information
           </h3>
           <div className="flex flex-col gap-3">
@@ -135,7 +135,7 @@ export const Contact = () => {
             ))}
           </div>
           <div>
-            <h4 className="text-xl font-medium mb-2">Connect with me</h4>
+            <h4 className="mb-2 text-xl font-medium">Connect with me</h4>
             <div className="flex gap-8">
               {connectsMe.map((connectMe) => {
                 const IconComponent = icons[connectMe.icon];
@@ -152,8 +152,8 @@ export const Contact = () => {
           </div>
 
           {/* card */}
-          <div className="flex flex-col items-center gap-3 bg-linear-to-br from-mutedBlue-300 to-turquoise-400 px-6 py-4 rounded-xl text-white text-center">
-            <h4 className="text-xl sm:text-2xl font-medium">
+          <div className="from-mutedBlue-300 to-turquoise-400 flex flex-col items-center gap-3 rounded-xl bg-linear-to-br px-6 py-4 text-center text-white">
+            <h4 className="text-xl font-medium sm:text-2xl">
               Let's work together!
             </h4>
             <p className="text-lg sm:text-xl">
@@ -163,7 +163,7 @@ export const Contact = () => {
               <Button
                 size="md"
                 variant="outline"
-                className="text-mutedBlue-300 sm:text-lg w-fit"
+                className="text-mutedBlue-300 w-fit sm:text-lg"
               >
                 Download Resume
               </Button>

@@ -6,7 +6,7 @@ export const AboutMe = () => {
   return (
     <div
       id="about"
-      className="py-16 px-6 md:px-12 bg-softWhite flex flex-col gap-14 items-center"
+      className="bg-softWhite flex flex-col items-center gap-14 px-6 py-16 md:px-12"
     >
       <PageHeader
         header={"About me"}
@@ -15,26 +15,26 @@ export const AboutMe = () => {
         }
       />
 
-      <div className="flex flex-col lg:flex-row gap-6 items-center max-w-330">
+      <div className="flex max-w-330 flex-col items-center gap-6 lg:flex-row">
         {/* imge */}
         <section className="flex h-full w-full">
-          <div className="flex items-end w-full">
-            <span className="w-10 md:w-20 h-10 md:h-20 rounded-full bg-turquoise-300 animate-float"></span>
+          <div className="flex w-full items-end">
+            <span className="bg-turquoise-300 animate-float h-10 w-10 rounded-full md:h-20 md:w-20"></span>
           </div>
           <div className="w-full">
-            <div className="w-50 md:w-100 h-50 md:h-100 rounded-full bg-turquoise-100">
+            <div className="bg-turquoise-100 h-50 w-50 rounded-full md:h-100 md:w-100">
               <img src="./images/fik.png" />
             </div>
           </div>
 
-          <div className="flex justify-center w-full">
-            <span className="w-13 md:w-25 h-13 md:h-25 rounded-full bg-turquoise-200 animate-float"></span>
+          <div className="flex w-full justify-center">
+            <span className="bg-turquoise-200 animate-float h-13 w-13 rounded-full md:h-25 md:w-25"></span>
           </div>
         </section>
 
         {/* contact */}
-        <section className="flex flex-col gap-4 h-full w-full">
-          <h3 className="text-xl sm:text-2xl font-medium">
+        <section className="flex h-full w-full flex-col gap-4">
+          <h3 className="text-xl font-medium sm:text-2xl">
             Full Stack Developer
           </h3>
           <p className="text-mutedBlueGray">

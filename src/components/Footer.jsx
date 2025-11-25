@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 export const Footer = () => {
   const location = useLocation().pathname;
   return (
-    <div className="bg-white px-4 md:px-12 flex flex-col justify-center">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-2 border-t py-2">
+    <div className="flex flex-col justify-center bg-white px-4 md:px-12">
+      <div className="flex flex-col items-center justify-between gap-2 border-t py-2 md:flex-row">
         <p>© 2025 Made withby Chafik Raden-ahmad</p>
 
         <Link
@@ -18,7 +18,7 @@ export const Footer = () => {
           <Button
             size="md"
             variant="outline"
-            className="text-base py-2 md:animate-bounce"
+            className="py-2 text-base md:animate-bounce"
           >
             <ArrowUp strokeWidth={1.5} className="size-5" />
             Back to top

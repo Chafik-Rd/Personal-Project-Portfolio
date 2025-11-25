@@ -8,7 +8,7 @@ export const ContactCard = ({ header, detail, icon, link }) => {
     calendar: Calendar,
     graduation: GraduationCap,
   };
- const IconComponent = icons[icon];
+  const IconComponent = icons[icon];
   return (
     <a
       href={link}
@@ -16,12 +16,12 @@ export const ContactCard = ({ header, detail, icon, link }) => {
       rel="noopener noreferrer"
       className={`${link === "#" && "pointer-events-none"}`}
     >
-      <div className="px-4 md:px-6 py-4 flex gap-3 items-center rounded-xl border-1 border-grayLight shadow-md hover:shadow-lg">
-        <div className="bg-turquoise-100 p-3 rounded-xl text-mutedBlue-300">
+      <div className="border-grayLight flex items-center gap-3 rounded-xl border-1 px-4 py-4 shadow-md hover:shadow-lg md:px-6">
+        <div className="bg-turquoise-100 text-mutedBlue-300 rounded-xl p-3">
           <IconComponent size={16} strokeWidth={1.5} />
         </div>
         <div>
-          <p className="font-medium text-lg sm:text-xl">{header}</p>
+          <p className="text-lg font-medium sm:text-xl">{header}</p>
           <p className="text-mutedBlueGray mt-1">{detail}</p>
         </div>
       </div>
