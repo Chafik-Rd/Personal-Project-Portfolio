@@ -4,21 +4,27 @@ import { Globe, Github } from "lucide-react";
 
 export const ProjectCard = ({ img, name, detail, tags, webDemo, gitHub }) => {
   return (
-    <div className="max-w-150 w-full bg-white rounded-xl shadow-md mx-auto hover:shadow-xl">
-      <div className="sm:h-48 w-full overflow-hidden">
-        <img src={img.url} alt={img.alt} className="rounded-t-xl w-full" />
-      </div>
+    <div className="mx-auto w-full max-w-150 rounded-xl border bg-white shadow-md hover:shadow-xl">
+      {img !== undefined && (
+        <div className="w-full overflow-hidden sm:h-48">
+          <img src={img.url} alt={img.alt} className="w-full rounded-t-xl" />
+        </div>
+      )}
 
-      <div className="py-6 px-6 sm:px-8 flex flex-col gap-5">
+      <div className="flex flex-col gap-5 px-6 py-6 sm:px-8">
         <h3 className="text-xl font-medium capitalize">{name}</h3>
-        <p className="text-mutedBlueGray hidden md:block">{detail}</p>
-        <div className="flex gap-3 flex-wrap">
+        <p
+          className={`text-mutedBlueGray ${img !== undefined ? "hidden md:block" : "line-clamp-6 md:line-clamp-none"}`}
+        >
+          {detail}
+        </p>
+        <div className="flex flex-wrap gap-3">
           {tags.map((tag, index) => (
             <Tag key={index} text={tag} />
           ))}
         </div>
-        <div className="flex gap-3 sm:gap-8 justify-center sm:justify-end">
-          {webDemo !== "" && (
+        <div className="flex justify-center gap-3 sm:justify-end sm:gap-8">
+          {webDemo !== undefined && (
             <a href={webDemo} target="_blank" rel="noopener noreferrer">
               <Button size="md" className="text-base">
                 <Globe strokeWidth={1.5} className="size-5" />
@@ -26,7 +32,7 @@ export const ProjectCard = ({ img, name, detail, tags, webDemo, gitHub }) => {
               </Button>
             </a>
           )}
-          {gitHub !== "" && (
+          {gitHub.trim() !== "" && (
             <a href={gitHub} target="_blank" rel="noopener noreferrer">
               <Button size="md" variant="outline" className="text-base">
                 <Github strokeWidth={1.5} className="size-5" />
