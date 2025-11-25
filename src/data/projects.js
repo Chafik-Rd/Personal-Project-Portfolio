@@ -65,7 +65,7 @@ export const projects = [
     },
     webDemo: "https://leftoverchef.vercel.app/",
     gitHub: "https://github.com/Chafik-Rd/Personal-Project-LeftoverChef",
-    pin: false,
+    pin: true,
   },
   {
     id: 6,
